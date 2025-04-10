@@ -1,14 +1,14 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int vowels = 0;
         String sentence = "";
 
         while (true) {
-            sentence = sc.nextLine();
+            sentence = br.readLine();
             if (sentence.equals("#")) break;
 
             char[] senToChar = sentence.toLowerCase().toCharArray();
